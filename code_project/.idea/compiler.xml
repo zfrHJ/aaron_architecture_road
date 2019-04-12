@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="code_project" />
+        <module name="kafka" />
+        <module name="redis" />
+        <module name="spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="code_project" target="1.5" />
+      <module name="kafka" target="1.8" />
+      <module name="redis" target="1.8" />
+      <module name="spring" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+#服务端口号
+server:
+  port: 8084
+
+#kafka配置
+spring:
+  kafka:
+      bootstrap-servers: 192.168.XXX.XXX:9092
+      producer:
+        retries: 0
+        batch-size: 26384
+        buffer-memory: 53554432
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+        compression-type: gzip
+        properties:
+          max.request.size: 15000000
+      consumer:
+        group-id: test-consumer-group
+        auto-commit-interval: 1000
+        auto-offset-reset: latest
+        enable-auto-commit: false
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        max-poll-records: 1500
+        properties:
+          max.partition.fetch.bytes: 15000000
