@@ -6,8 +6,10 @@
 3.项目将会从服务器，框架，源码，分布式知识点进行阐述。有不对的地方，欢迎更新指正，可以关注我的公众号直接发消息进行联系！
 
 ## 二、知识整理脑图
+1.GitHub上知名脑图，很多包括架构师，Java等脑图。地址是：https://github.com/TeamStuQ/skill-map
 
-
+2.下面是我整理的部分知识点结构脑图，欢迎补充：
+![mind-map](https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.png)
 
 ## 三、知识点详解
 
