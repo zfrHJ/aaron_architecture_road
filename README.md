@@ -16,5 +16,5 @@
 
 ## 四、欢迎关注本人微信公众号，扫描二维码直接关注。
 
-![微信图片_20190320205839](C:\Users\dell\Desktop\开发技术\微信图片_20190320205839.jpg)
+![微信图片_20190320205839](https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/aaron.jpg)
 
