@@ -1,0 +1,83 @@
+
+1. 临时和永久关闭Selinux
+
+原因：如果不关闭可能导致以下的问题：
+find: '.': Permission denied
+chown: changing ownership of '.': Permission denied
+或
+Sentinel config file /usr/local/etc/redis/sentinel.conf is not writable: Permission denied. Exiting...
+	
+	最终的原因是：Centos7安全Selinux禁止了一些安全权限，导致docker文件在进行挂载的时候会提示没有权限。
+	
+	解决方法：	
+		1.在docker run中加入 --privileged=true  给容器加上特定权限。
+		2.关闭selinux。项目中采用了这个方法：
+		临时关闭： setenforce 0
+			
+		永久关闭：			
+			 vim /etc/sysconfig/selinux
+			 SELINUX=enforcing 改为 SELINUX=disabled
+			 
+			 重启服务reboot：reboot
+			 
+			 
+		3.在selinux添加规则，修改挂载目录de。
+
+
+2.命令的执行
+	
+	第一种命令：
+	
+	1.进入usr/local 目录 分别创建 mkdir -p docker/redis docker/sentinel
+	
+	2.进入redis文件夹，并创建如下docker-compose.yml文件
+	
+	3.进入sentinel文件夹，并创建如下docker-compose.yml文件
+	
+	4.创建哨兵文件(sentinel.conf)，并将如下内容复制进去，保存并退出.同时拷贝三分文件。
+	
+	5.启动集群，先启动master-slave，在启动sentinel。
+	先进入redis文件夹下，执行docker-compose up -d
+	然后进入sent文件夹下，执行执行docker-compose up -d
+	
+	6.查看启动情况。命令如下：	
+	docker exec -it c8033dca008c bash
+	root@c8033dca008c:/data# redis-cli -p 26379
+	127.0.0.1:26379> sentinel master mymaster
+
+	
+	第二种命令：
+	
+	1.首先创建data目录，主要是为了持久化保存redis的数据。
+	
+	mkdir -p /XXX/data/master
+	mkdir -p /XXX/data/slave1
+	mkdir -p /XXX/data/slave2
+	mkdir -p /XXX/data/sentinel-1
+	mkdir -p /XXX/data/sentinel-2
+	
+	注意：/XXX 代表相对路径
+	
+	2.分别创建 /sentinel-1.conf ，sentinel-2.conf
+
+	注意：
+		1）monitor     指的是初始化的监控主切点，ip和端口，后面的数字2代表，必须2个sentinel才能判断主节点是否失败
+
+		2）down-after-milliseconds   指的是超过5000秒，且没有回复，则判定主节点不可达
+
+		3）failover-timeout    指的是故障转移时间
+
+		4）parallel-syncs   指的是故障转移到新的主节点时，从节点的复制节点数量
+	
+	
+	3.创建docker-compose.yml
+	
+	4.到docker-compose.yml的文件下，执行docker-compose up -d
+	
+	5.查看是否成功。docker exec -it sentinel-1 redis-cli -h XXX -p 26379 ，进去之后执行info语句。
+	
+
+
+
+
+

@@ -1,0 +1,37 @@
+version: '3'
+services:
+  master:
+    image: redis
+    container_name: master
+    network_mode: "host"
+    volumes:
+      - ./data/master:/data
+    command: redis-server --port 16379
+  slave1:
+    image: redis
+    container_name: slave1
+    network_mode: "host"
+    volumes:
+      - ./data/slave1:/data
+    command: redis-server --port 16380 --slaveof 192.168.170.137 16379
+  slave2:
+    image: redis
+    container_name: slave2
+    network_mode: "host"
+    volumes:
+      - ./data/slave2:/data
+    command: redis-server --port 16381 --slaveof 192.168.170.137 16379
+  sentinel-1:
+    image: redis
+    container_name: sentinel-1
+    network_mode: "host"
+    volumes:
+      - ./sentinel-1.conf:/etc/redis/sentinel.conf
+      - ./data/sentinel-1:/data
+  sentinel-2:
+    image: redis
+    container_name: sentinel-2
+    network_mode: "host"
+    volumes:
+      - ./sentinel-2.conf:/etc/redis/sentinel.conf
+      - ./data/sentinel-2:/data
