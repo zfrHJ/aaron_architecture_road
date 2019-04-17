@@ -1,0 +1,13 @@
+yum install docker
+安装完成后，使用下面的命令来启动 docker 服务，并将其设置为开机启动：
+service docker start
+chkconfig docker on
+
+修改系统中docker对应的配置文件即可，如下：
+vim /etc/docker/daemon.json
+#添加后
+{
+ "registry-mirrors": ["https://registry.docker-cn.com"],
+ "live-restore": true
+}
+环境搭建完毕。
