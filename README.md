@@ -61,6 +61,13 @@
 >> 14.[哨兵机制和集群的原理。](https://mp.weixin.qq.com/s/I2b6OO1Sg3vmymuAPUru-w)。  
 >> 15.[面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
 
+#### Kafka系列
+>> 1.[场景介绍和环境搭建](https://mp.weixin.qq.com/s/IKSPS5Ile3JnCSkvTrRxwA)
+>> 2.[项目实战](https://mp.weixin.qq.com/s/GHx1GTlJFHpzQNqPpJ68LA)
+>> 3.[原理概念介绍](https://mp.weixin.qq.com/s/77CgXVuCuq77vZfzrrVI2Q)
+>> 4.[kafka优化(从配置和代码上分析)](https://mp.weixin.qq.com/s/Pp5Aq5SUdbXDosmWifLmrQ)
+
+
 ### 工具
 将以项目使用的软件和工具进行分类，比如提交代码的工具，编写文档的工具，画图的工具。有些会以具体的知识点重现，部分将以链接的方式，具体的使用需要自己进行学习。待更新........
 
