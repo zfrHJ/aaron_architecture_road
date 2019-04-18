@@ -38,11 +38,7 @@
 重点介绍TCP协议，同时讲述框架，比如Http相关的client 和 著名的netty框架。待更新........
 
 ### 数据层
-数据库将以mysql为基础进行讲解。同时也会讲nosql，比如redis等。待更新........
-
-### 框架(应用)
-重点介绍常用框架，项目常用的。比如Spring等 。待更新........
-
+数据库将以mysql为基础进行讲解。同时也会讲nosql，比如redis等。
 
 #### Redis 系列
 >> 1.[Redis分布式锁](https://mp.weixin.qq.com/s/bxIZDcmh7XW5xDuiHQ61nw)。  
@@ -60,6 +56,9 @@
 >> 13.[Redis为什么那么快？存储结构是咋样的?](https://mp.weixin.qq.com/s/WrXxtrw1S6_OZ7b9AsWZxg)。  
 >> 14.[哨兵机制和集群的原理。](https://mp.weixin.qq.com/s/I2b6OO1Sg3vmymuAPUru-w)。  
 >> 15.[面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
+
+### 框架(应用)
+重点介绍常用框架，项目常用的。比如Spring等 。待更新........
 
 #### Kafka系列
 >> 1.[场景介绍和环境搭建](https://mp.weixin.qq.com/s/IKSPS5Ile3JnCSkvTrRxwA)。  
