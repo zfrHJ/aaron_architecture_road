@@ -25,8 +25,8 @@
 介绍Java的特性，同时穿插源码解读。待更新........
 
 #### 2.Python
->> 1.[环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。  
->> 2.[语法讲解](https://mp.weixin.qq.com/s/TQY_ciSeFKQxRv1Q5twqyw)。
+* [环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。  
+* [语法讲解](https://mp.weixin.qq.com/s/TQY_ciSeFKQxRv1Q5twqyw)。
 
 ### 设计思想和架构
 这部分知识点，主讲设计模式，同时穿插在项目中对领域驱动模型的理解和最新使用到的中台思想。待更新........
@@ -41,30 +41,30 @@
 数据库将以mysql为基础进行讲解。同时也会讲nosql，比如redis等。
 
 #### Redis 系列
->> 1.[Redis分布式锁](https://mp.weixin.qq.com/s/bxIZDcmh7XW5xDuiHQ61nw)。  
->> 2.[分布式锁的总结和历史遗留问题](https://mp.weixin.qq.com/s/Y3zQewWeTSIR04IGTZcV9w)。  
->> 3.[Redis消息队列](https://mp.weixin.qq.com/s/u_WN87XJ96LVlZEMuZF91w)。  
->> 4.[Redis位图](https://mp.weixin.qq.com/s/qVNmNQnd20rtvpkSz_Lr7A)。  
->> 5.[Redis的HyperLogLong](https://mp.weixin.qq.com/s/1YNMG13l0881rZvjaS2YXw)。  
->> 6.[Redis的布隆过滤器详解和缓存穿透方案解析](https://mp.weixin.qq.com/s/gKVWCGUnCL8HtIuM3U-_6g)。  
->> 7.[Redis地理位置GEO](https://mp.weixin.qq.com/s/Bt6amvb0X6CHrDM2ntPN8A)。  
->> 8.[Redis中的Key相关操作](https://mp.weixin.qq.com/s/3bELqu1aU-U-pYra9BoMMg)。  
->> 9.[Redis线程问题和持久化知识](https://mp.weixin.qq.com/s/ykiN5Vxsb_-IXzdS2lPaFQ)。  
->> 10.[Redis的事务，安全和过期策略](https://mp.weixin.qq.com/s/TxsuNnV7BgAqMjfFQBNpBA)。  
->> 11.[Redis的开发规范(阿里云的)](https://mp.weixin.qq.com/s/8DAErvYvNMRrLfUdhqqkJw)。  
->> 12.[Redis字典hash实现和rehash过程](https://mp.weixin.qq.com/s/mYkdZeULsyHbvx6OqdMSPg)。  
->> 13.[Redis为什么那么快？存储结构是咋样的?](https://mp.weixin.qq.com/s/WrXxtrw1S6_OZ7b9AsWZxg)。  
->> 14.[哨兵机制和集群的原理。](https://mp.weixin.qq.com/s/I2b6OO1Sg3vmymuAPUru-w)。  
->> 15.[面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
+* [Redis分布式锁](https://mp.weixin.qq.com/s/bxIZDcmh7XW5xDuiHQ61nw)。  
+* [分布式锁的总结和历史遗留问题](https://mp.weixin.qq.com/s/Y3zQewWeTSIR04IGTZcV9w)。  
+* [Redis消息队列](https://mp.weixin.qq.com/s/u_WN87XJ96LVlZEMuZF91w)。  
+* [Redis位图](https://mp.weixin.qq.com/s/qVNmNQnd20rtvpkSz_Lr7A)。  
+* [Redis的HyperLogLong](https://mp.weixin.qq.com/s/1YNMG13l0881rZvjaS2YXw)。  
+* [Redis的布隆过滤器详解和缓存穿透方案解析](https://mp.weixin.qq.com/s/gKVWCGUnCL8HtIuM3U-_6g)。  
+* [Redis地理位置GEO](https://mp.weixin.qq.com/s/Bt6amvb0X6CHrDM2ntPN8A)。  
+* [Redis中的Key相关操作](https://mp.weixin.qq.com/s/3bELqu1aU-U-pYra9BoMMg)。  
+* [Redis线程问题和持久化知识](https://mp.weixin.qq.com/s/ykiN5Vxsb_-IXzdS2lPaFQ)。  
+* [Redis的事务，安全和过期策略](https://mp.weixin.qq.com/s/TxsuNnV7BgAqMjfFQBNpBA)。  
+* [Redis的开发规范(阿里云的)](https://mp.weixin.qq.com/s/8DAErvYvNMRrLfUdhqqkJw)。  
+* [Redis字典hash实现和rehash过程](https://mp.weixin.qq.com/s/mYkdZeULsyHbvx6OqdMSPg)。  
+* [Redis为什么那么快？存储结构是咋样的?](https://mp.weixin.qq.com/s/WrXxtrw1S6_OZ7b9AsWZxg)。  
+* [哨兵机制和集群的原理。](https://mp.weixin.qq.com/s/I2b6OO1Sg3vmymuAPUru-w)。  
+* [面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
 
 #### Kafka系列
->> 1.[场景介绍和环境搭建](https://mp.weixin.qq.com/s/IKSPS5Ile3JnCSkvTrRxwA)。  
->> 2.[项目实战](https://mp.weixin.qq.com/s/GHx1GTlJFHpzQNqPpJ68LA)。  
->> 3.[原理概念介绍](https://mp.weixin.qq.com/s/77CgXVuCuq77vZfzrrVI2Q)。  
->> 4.[kafka优化(从配置和代码上分析)](https://mp.weixin.qq.com/s/Pp5Aq5SUdbXDosmWifLmrQ)。  
+* [场景介绍和环境搭建](https://mp.weixin.qq.com/s/IKSPS5Ile3JnCSkvTrRxwA)。  
+* [项目实战](https://mp.weixin.qq.com/s/GHx1GTlJFHpzQNqPpJ68LA)。  
+* [原理概念介绍](https://mp.weixin.qq.com/s/77CgXVuCuq77vZfzrrVI2Q)。  
+* [kafka优化(从配置和代码上分析)](https://mp.weixin.qq.com/s/Pp5Aq5SUdbXDosmWifLmrQ)。  
 
 
 ### 工具
