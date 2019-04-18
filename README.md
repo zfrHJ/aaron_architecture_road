@@ -43,7 +43,7 @@
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
 
 
-#### >Redis 系列
+#### Redis 系列
 >>1.[Redis分布式锁](https://mp.weixin.qq.com/s/bxIZDcmh7XW5xDuiHQ61nw)。  
 >>2.[分布式锁的总结和历史遗留问题](https://mp.weixin.qq.com/s/Y3zQewWeTSIR04IGTZcV9w)。  
 >>3.[Redis消息队列](https://mp.weixin.qq.com/s/u_WN87XJ96LVlZEMuZF91w)。  
