@@ -25,7 +25,7 @@
 介绍Java的特性，同时穿插源码解读。待更新........
 
 #### 2.Python
->> 1.[环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。
+>> 1.[环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。  
 >> 2.[语法讲解](https://mp.weixin.qq.com/s/TQY_ciSeFKQxRv1Q5twqyw)。
 
 ### 设计思想和架构
