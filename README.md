@@ -1,5 +1,5 @@
 ## 一、项目介绍
-1.code_project是代码管理库，主要是学习过程中的项目实战。主要以Java和Python语言为主，同时包括脚本语言(sh,sql)。Java以Spring Boot框架为基础进行搭建。
+1.[code_project](https://github.com/zfrHJ/aaron_architecture_road/tree/master/code_project)是代码管理库，主要是学习过程中的项目实战。主要以Java和Python语言为主，同时包括脚本语言(sh,sql)。Java以Spring Boot框架为基础进行搭建。
 
 2.其他的都是项目资料：
 * [picture](https://github.com/zfrHJ/aaron_architecture_road/tree/master/picture)文件夹是存储项目图片的；  
