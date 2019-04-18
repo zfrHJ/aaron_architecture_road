@@ -55,7 +55,7 @@
 * [Redis字典hash实现和rehash过程](https://mp.weixin.qq.com/s/mYkdZeULsyHbvx6OqdMSPg)。  
 * [Redis为什么那么快？存储结构是咋样的?](https://mp.weixin.qq.com/s/WrXxtrw1S6_OZ7b9AsWZxg)。  
 * [哨兵机制和集群的原理。](https://mp.weixin.qq.com/s/I2b6OO1Sg3vmymuAPUru-w)。  
-* [面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
+* [Redis调优和面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
@@ -82,6 +82,16 @@
 
 ### 面试
 * [三年半 Java 后端鹅厂面试经历](https://mp.weixin.qq.com/s/oAiXvB9kZ_bNjCaK8ZyaTA)。
+
+### 持续集成
+
+#### Docker系列
+* [docker环境搭建和介绍](https://mp.weixin.qq.com/s/Rmh5rDTjl-LyT1pOagkm1A)。
+* [DockerFile介绍](https://mp.weixin.qq.com/s/qtaXJDje6eFBf_27gVGoBw)。
+* [Docker容器管理/数据卷管理/容器互联](https://mp.weixin.qq.com/s/_uJTlx5OIwC22s-Lc-V0xg)。
+
+注意：[**docker相关实战命令地址**](https://github.com/zfrHJ/aaron_architecture_road/tree/master/environmental_construction/docker)。
+
 
 ### 项目实战
 主要以线上问题记录和热点问题提供思路解决。基础以云(腾讯云和阿里云)和微服务。
