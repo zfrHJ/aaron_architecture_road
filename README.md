@@ -65,16 +65,29 @@
 * [项目实战](https://mp.weixin.qq.com/s/GHx1GTlJFHpzQNqPpJ68LA)。  
 * [原理概念介绍](https://mp.weixin.qq.com/s/77CgXVuCuq77vZfzrrVI2Q)。  
 * [kafka优化(从配置和代码上分析)](https://mp.weixin.qq.com/s/Pp5Aq5SUdbXDosmWifLmrQ)。  
+* [记一次线上调优:max.request.size](https://mp.weixin.qq.com/s/7QHdmIxo8AYZbhw0zcTVnQ)。
 
+#### zookeeper系列
+* [概念和环境介绍](https://mp.weixin.qq.com/s/wn0Evzf4hj6gEd2wV773UA)。
+* [选举算法和节点介绍](https://mp.weixin.qq.com/s/MOfHU7R2-pG8eqb7YkHFGA)。
+* [API使用,分布式锁和服务注册与发现](https://mp.weixin.qq.com/s/W1wM5UNUFRAJZA02RLvIvw)。
 
 ### 工具
-将以项目使用的软件和工具进行分类，比如提交代码的工具，编写文档的工具，画图的工具。有些会以具体的知识点重现，部分将以链接的方式，具体的使用需要自己进行学习。待更新........
+将以项目使用的软件和工具进行分类，比如提交代码的工具，编写文档的工具，画图的工具。有些会以具体的知识点重现，部分将以链接的方式，具体的使用需要自己进行学习。
+
+* [Git入门教程](https://mp.weixin.qq.com/s/WTtVh3ZS9bNMbfDB7ZkqUQ)。
+
+#### Linux系列
+* [网络问题和文件上传](https://mp.weixin.qq.com/s/ST7YNvbtl6KH20Y5jfk7EA)。
 
 ### 面试
-待更新........
+* [三年半 Java 后端鹅厂面试经历](https://mp.weixin.qq.com/s/oAiXvB9kZ_bNjCaK8ZyaTA)。
 
 ### 项目实战
-待更新........
+
+#### 云和微服务
+* [线上问题：云崩溃和服务不可用](https://mp.weixin.qq.com/s/vLYAKW-w4eKr7JgXHPbUOw)。
+
 
 ## 四、欢迎关注本人微信公众号，扫描二维码直接关注。
 
