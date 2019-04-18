@@ -62,10 +62,10 @@
 >> 15.[面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
 
 #### Kafka系列
->> 1.[场景介绍和环境搭建](https://mp.weixin.qq.com/s/IKSPS5Ile3JnCSkvTrRxwA)
->> 2.[项目实战](https://mp.weixin.qq.com/s/GHx1GTlJFHpzQNqPpJ68LA)
->> 3.[原理概念介绍](https://mp.weixin.qq.com/s/77CgXVuCuq77vZfzrrVI2Q)
->> 4.[kafka优化(从配置和代码上分析)](https://mp.weixin.qq.com/s/Pp5Aq5SUdbXDosmWifLmrQ)
+>> 1.[场景介绍和环境搭建](https://mp.weixin.qq.com/s/IKSPS5Ile3JnCSkvTrRxwA)。  
+>> 2.[项目实战](https://mp.weixin.qq.com/s/GHx1GTlJFHpzQNqPpJ68LA)。  
+>> 3.[原理概念介绍](https://mp.weixin.qq.com/s/77CgXVuCuq77vZfzrrVI2Q)。  
+>> 4.[kafka优化(从配置和代码上分析)](https://mp.weixin.qq.com/s/Pp5Aq5SUdbXDosmWifLmrQ)。  
 
 
 ### 工具
