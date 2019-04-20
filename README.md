@@ -76,6 +76,9 @@
 将以项目使用的软件和工具进行分类，比如提交代码的工具，编写文档的工具，画图的工具。有些会以具体的知识点重现，部分将以链接的方式，具体的使用需要自己进行学习。
 
 * [Git入门教程](https://mp.weixin.qq.com/s/WTtVh3ZS9bNMbfDB7ZkqUQ)。
+* [IDEA常用插件](https://mp.weixin.qq.com/s/zyIKY0Bc7DXic7kQN-zuRA)。
+* [IDEA其他快速提高开发效率的功能，比如：快速填写JSON](https://mp.weixin.qq.com/s/xdwVj6hnZsT8B42yGz1w7w)。
+* [IDEA常用配置](https://mp.weixin.qq.com/s/RCaPdXUHAbFz_caOixz8FQ)。
 
 #### Linux系列
 * [网络问题和文件上传](https://mp.weixin.qq.com/s/ST7YNvbtl6KH20Y5jfk7EA)。
