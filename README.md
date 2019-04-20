@@ -96,6 +96,8 @@
 * [maven本地上传Jar包到私服和常用命令](https://mp.weixin.qq.com/s/l82AV9-wh0aih1y-HWQSbA)。
 * [maven原理篇详解：冲突解决，生命周期](https://mp.weixin.qq.com/s/Kxevch-FpDfkY2zuXUbUvw)。
 
+注意：[**maven相关配置文件地址**](https://github.com/zfrHJ/aaron_architecture_road/tree/master/environmental_construction/maven)。
+
 ### 项目实战
 主要以线上问题记录和热点问题提供思路解决。基础以云(腾讯云和阿里云)和微服务。
 #### 云和微服务
