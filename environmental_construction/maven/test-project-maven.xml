@@ -1,0 +1,33 @@
+	
+	<!-- 1. settings.xml 文件配置 ，第一篇 本地包打包到私服上 -->
+	
+	<!--首先修改肯定是settins.xml的镜像地址，这个肯定在搭建项目的时候就会告诉你的。如下：-->
+	<mirror>  
+		<id>ctxsdhy-hosted-snapshot</id>  
+		<mirrorOf>*</mirrorOf>  
+		<name>ctxsdhy-hosted-snapshot</name>  
+		<url>http://192.168.137.168:8081/nexus/content/repositories/ctxsdhy-hosted-snapshot/</url>  
+	</mirror>
+	
+	<!--然后是把服务器的账号密码加上，如下：-->
+	<servers>
+    <server>
+      <id>ctxsdhy-hosted-snapshot</id>
+      <username>repouser</username>
+      <password>repopwd</password>
+    </server>
+  </servers>
+  
+  <!--其次是在pom.xml增加下面一段坐标信息，如下:-->
+	<distributionManagement>
+		<repository>
+			<id>ctxsdhy-hosted-release</id>
+			<name>ctxsdhy-hosted-release</name>
+			<url>http://192.168.137.168:8081/nexus/content/repositories/ctxsdhy-hosted-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>ctxsdhy-hosted-snapshot</id>
+			<name>ctxsdhy-hosted-snapshot</name>
+			<url>http://192.168.137.168:8081/nexus/content/repositories/ctxsdhy-hosted-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
