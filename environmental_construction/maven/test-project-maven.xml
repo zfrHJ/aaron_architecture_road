@@ -11,12 +11,12 @@
 	
 	<!--然后是把服务器的账号密码加上，如下：-->
 	<servers>
-    <server>
-      <id>ctxsdhy-hosted-snapshot</id>
-      <username>repouser</username>
-      <password>repopwd</password>
-    </server>
-  </servers>
+		<server>
+		  <id>ctxsdhy-hosted-snapshot</id>
+		  <username>repouser</username>
+		  <password>repopwd</password>
+		</server>
+	</servers>
   
   <!--其次是在pom.xml增加下面一段坐标信息，如下:-->
 	<distributionManagement>
