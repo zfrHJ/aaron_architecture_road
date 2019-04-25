@@ -1,0 +1,203 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<!-- 包基础配置信息 start-->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zfr.aaron</groupId>
+    <artifactId>Demo-api</artifactId>
+    <packaging>jar</packaging>
+    <name>Demo-api</name>
+    <properties>
+        <java.version>1.8</java.version>
+        <java.source.version>1.8</java.source.version>
+        <java.target.version>1.8</java.target.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <runSuite>**/*Suite.class</runSuite>
+
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+	<!-- 包基础配置信息 end -->
+	
+	<!-- 父包可以用来控制版本信息 -->
+    <parent>
+        <groupId>com.pagoda</groupId>
+        <artifactId>Demo-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../Demo-parent/pom.xml</relativePath>
+    </parent>
+	
+	<!-- 添加依赖项目Jar包 start -->
+    <dependencies>   
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+        </dependency>
+
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        
+
+        <!-- 热加载
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+            -->
+
+    </dependencies>
+	<!-- 添加依赖项目Jar包 end  -->
+
+
+	<!-- 项目构建start  -->
+    <build>
+        <finalName>${war.name}</finalName>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <!-- Turn on filtering by default for application properties -->
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>purge-local-dependencies</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>purge-local-repository</goal>
+                        </goals>
+                        <configuration>
+                            <resolutionFuzziness>groupId</resolutionFuzziness>
+                            <includes>
+                                <include>com.pagoda.platform</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>                
+            </plugin>
+
+            <!--打包跳过测试-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <!--<skipTests>true</skipTests>-->
+                    <includes>
+                        <include>${runSuite}</include>
+                    </includes>
+                    <!--<systemPropertyVariables>-->
+                    <!--<jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>-->
+                    <!--</systemPropertyVariables>-->
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>${dockerfile-maven-plugin.version}</version>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>${maven-scm-plugin.version}</version>
+                <!--                <configuration>-->
+                <!--                    <username>xxx</username>-->
+                <!--                    <password>yyy</password>-->
+                <!--                </configuration>-->
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven-release-plugin.version}</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <!--<releaseProfiles>releases</releaseProfiles>-->
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+	<!-- 项目构建  end  -->
+	
+	<!-- 项目环境配置 start-->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <package.environment>default,local</package.environment>
+                <war.name>Demo-api</war.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <package.environment>default,dev</package.environment>
+                <war.name>Demo-api</war.name>
+               <!-- <dubbo.enabled>true</dubbo.enabled>-->
+            </properties>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties>
+                <package.environment>default,test</package.environment>
+                <war.name>Demo-api</war.name>
+                <!--<dubbo.enabled>true</dubbo.enabled>-->
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>staging</id>
+            <properties>
+                <package.environment>default,staging</package.environment>
+                <war.name>Demo-api</war.name>
+               <!-- <dubbo.enabled>true</dubbo.enabled>-->
+            </properties>
+        </profile>
+		<!-- 项目环境配置 end-->
+        <profile>
+            <id>prod</id>
+            <properties>
+                <package.environment>default,prod</package.environment>
+                <war.name>Demo-api</war.name>
+               <!-- <dubbo.enabled>true</dubbo.enabled>-->
+            </properties>
+        </profile>
+    </profiles>
+</project>
