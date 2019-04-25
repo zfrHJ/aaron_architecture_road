@@ -98,6 +98,7 @@
 #### Maven系列
 * [maven本地上传Jar包到私服和常用命令](https://mp.weixin.qq.com/s/l82AV9-wh0aih1y-HWQSbA)。
 * [maven原理篇详解：冲突解决，生命周期](https://mp.weixin.qq.com/s/Kxevch-FpDfkY2zuXUbUvw)。
+* [maven实战演练](https://mp.weixin.qq.com/s/AGqA0s0IPkIzelU1sJVH8A)。
 
 注意：[**maven相关配置文件地址**](https://github.com/zfrHJ/aaron_architecture_road/tree/master/environmental_construction/maven)。
 
