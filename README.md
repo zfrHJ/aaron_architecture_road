@@ -57,6 +57,9 @@
 * [哨兵机制和集群的原理。](https://mp.weixin.qq.com/s/I2b6OO1Sg3vmymuAPUru-w)。  
 * [Redis调优和面试题](https://mp.weixin.qq.com/s/oqWaZsahTYFudWDbfGPUbw)。  
 
+#### MySQL系列
+* [MySQL环境搭建详解](https://mp.weixin.qq.com/s/gMzH2AbhhNksESz5z4xGqg)。
+
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
 
