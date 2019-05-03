@@ -59,6 +59,10 @@
 
 #### MySQL系列
 * [MySQL环境搭建详解](https://mp.weixin.qq.com/s/gMzH2AbhhNksESz5z4xGqg)。
+* [一条MySQL语句是如何执行的呢？](https://mp.weixin.qq.com/s/Ee8j4zDGtbDVg3FBS_gx_g)。
+* [腾讯面试：一条SQL语句执行得很慢的原因有哪些？番外篇](https://mp.weixin.qq.com/s/A4HOPReSmC7DH2BhH4G5pQ)。
+* [如果有人问你数据库的原理，叫他看这篇文章!番外篇](https://mp.weixin.qq.com/s/_jUud1jG9IO8ElEzxERFGA)。
+* [一篇详解between,in,大于的效率，同时limit如何使用？](https://mp.weixin.qq.com/s/wjg-adOozLVMIUwdS1EdUg)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
