@@ -27,6 +27,7 @@
 #### 2.Python
 * [环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。  
 * [语法讲解](https://mp.weixin.qq.com/s/TQY_ciSeFKQxRv1Q5twqyw)。
+* [入门篇 (上)](https://mp.weixin.qq.com/s/Xb5lb5aEYaz0p_PCmUD2xQ)。
 
 ### 设计思想和架构
 这部分知识点，主讲设计模式，同时穿插在项目中对领域驱动模型的理解和最新使用到的中台思想。待更新........
@@ -63,6 +64,7 @@
 * [腾讯面试：一条SQL语句执行得很慢的原因有哪些？番外篇](https://mp.weixin.qq.com/s/A4HOPReSmC7DH2BhH4G5pQ)。
 * [如果有人问你数据库的原理，叫他看这篇文章!番外篇](https://mp.weixin.qq.com/s/_jUud1jG9IO8ElEzxERFGA)。
 * [一篇详解between,in,大于的效率，同时limit如何使用？](https://mp.weixin.qq.com/s/wjg-adOozLVMIUwdS1EdUg)。
+* [schema与数据类型优化和大表修改字段](https://mp.weixin.qq.com/s/dguzCmhTc7kF7fBXhzkQBw)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
@@ -118,4 +120,13 @@
 ## 四、欢迎关注本人微信公众号，扫描二维码直接关注。
 
 ![微信图片_20190320205839](https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/aaron.jpg)
+
+## 五、官网网站链接
+
+* [Percona Toolkit](https://www.percona.com/downloads/percona-toolkit/LATEST/)。
+* [redis官网](https://redis.io/)。
+* [mybatis-plus](https://mp.baomidou.com/)。
+
+
+
 
