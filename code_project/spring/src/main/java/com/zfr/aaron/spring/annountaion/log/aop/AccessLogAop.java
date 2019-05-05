@@ -1,6 +1,6 @@
 package com.zfr.aaron.spring.annountaion.log.aop;
 
-import cn.hutool.json.JSONUtil;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -46,8 +46,8 @@ public class AccessLogAop {
             log.info("class_method={}", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
 
             Object[] paranValues = joinPoint.getArgs();
-            String param = JSONUtil.toJsonStr(paranValues);
-            log.info("param  ={}", param);
+            //String param = JSONUtil.toJsonStr(paranValues);
+            //log.info("param  ={}", param);
 
         } catch (Exception e) {
             log.error("doBefore exception={}", e);
