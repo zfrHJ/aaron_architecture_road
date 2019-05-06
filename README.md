@@ -30,7 +30,14 @@
 * [入门篇 (上)](https://mp.weixin.qq.com/s/Xb5lb5aEYaz0p_PCmUD2xQ)。
 
 ### 设计思想和架构
-这部分知识点，主讲设计模式，同时穿插在项目中对领域驱动模型的理解和最新使用到的中台思想。待更新........
+这部分知识点，主讲设计模式，同时穿插在项目中对领域驱动模型的理解和最新使用到的中台思想。
+
+#### 设计模式
+* [UML,时序图和设计模式六大原则详解](https://mp.weixin.qq.com/s/UCinvvvTaqKTCVilz_vvBw)。
+
+
+#### 系统设计
+* [系统设计典型问题的思考](https://mp.weixin.qq.com/s/ds2FVCBhBS-5NTuWcggu1Q)。
 
 ### 操作系统
 这部分知识点将以推荐数据的方式进行呈现。待更新........
@@ -65,6 +72,7 @@
 * [如果有人问你数据库的原理，叫他看这篇文章!番外篇](https://mp.weixin.qq.com/s/_jUud1jG9IO8ElEzxERFGA)。
 * [一篇详解between,in,大于的效率，同时limit如何使用？](https://mp.weixin.qq.com/s/wjg-adOozLVMIUwdS1EdUg)。
 * [schema与数据类型优化和大表修改字段](https://mp.weixin.qq.com/s/dguzCmhTc7kF7fBXhzkQBw)。
+* [数据库索引原理(B+树)上篇](https://mp.weixin.qq.com/s/uGtNIAtTpCHWELgxyMHvOw)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
