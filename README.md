@@ -73,6 +73,16 @@
 * [一篇详解between,in,大于的效率，同时limit如何使用？](https://mp.weixin.qq.com/s/wjg-adOozLVMIUwdS1EdUg)。
 * [schema与数据类型优化和大表修改字段](https://mp.weixin.qq.com/s/dguzCmhTc7kF7fBXhzkQBw)。
 * [数据库索引原理(B+树)上篇](https://mp.weixin.qq.com/s/uGtNIAtTpCHWELgxyMHvOw)。
+* [数据库索引原理(B+树)下篇](https://mp.weixin.qq.com/s/864XgIq6oHaMYiZfUUS8pQ)。
+* [高性能的索引策略：索引创建，索引选择](https://mp.weixin.qq.com/s/rnGWrN01rqvRqN_fCF9N1Q)。
+* [EXPLAIN详细分析](https://mp.weixin.qq.com/s/DX13M72CaKA2Fu68kZty4A)。
+* [高性能SQL优化](https://mp.weixin.qq.com/s/62IUhDo2W7vvvGuYbxWK1A)。
+* [MySQL事务](https://mp.weixin.qq.com/s/4jEcUO0qVDCvf8Ae8Y1AnQ)。
+* [MySQL锁机制详解](https://mp.weixin.qq.com/s/HROfk9pNQ7wDYL-ZELiYQA)。
+* [MySQL binlog日志详解](https://mp.weixin.qq.com/s/WSzFbEwa9Elgcm7KbwcleA)。
+* [MySql分区表性能测试及切换案例](https://mp.weixin.qq.com/s/Ls13LQXld87NynsH3ENLJQ)。
+* [MySQL主从复制及原理](https://mp.weixin.qq.com/s/rEgZLaeauGuqBQWfFmfYyg)。
+* [MySql开发规范和实战(备份/分区)](https://mp.weixin.qq.com/s/VgD2dR5igpLcr3V94Ig1IA)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
