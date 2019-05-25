@@ -38,6 +38,7 @@
 
 #### 系统设计
 * [系统设计典型问题的思考](https://mp.weixin.qq.com/s/ds2FVCBhBS-5NTuWcggu1Q)。
+* [设计一个电商平台积分兑换系统](http://mp.weixin.qq.com/wap/loginauthtmpl?action=index&notifyticket=ca3820f3a2e07c1d9225548a13a8ba1a#wechat_redirect)。
 
 ### 操作系统
 这部分知识点将以推荐数据的方式进行呈现。待更新........
@@ -83,6 +84,8 @@
 * [MySql分区表性能测试及切换案例](https://mp.weixin.qq.com/s/Ls13LQXld87NynsH3ENLJQ)。
 * [MySQL主从复制及原理](https://mp.weixin.qq.com/s/rEgZLaeauGuqBQWfFmfYyg)。
 * [MySql开发规范和实战(备份/分区)](https://mp.weixin.qq.com/s/VgD2dR5igpLcr3V94Ig1IA)。
+* [【踩坑记录】记一次MySQL主从复制延迟的坑](https://www.cnblogs.com/hoohack/p/7073286.html)。
+* [MySql面试题一（主从复制延迟问题）](https://mp.weixin.qq.com/s/iW2ief3ir0pRGnHxaTJ8fg)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
