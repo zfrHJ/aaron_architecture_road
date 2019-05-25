@@ -11,7 +11,7 @@
 1.GitHub上知名脑图，很多包括架构师，Java等脑图。地址是：https://github.com/TeamStuQ/skill-map
 
 2.下面是我整理的部分知识点结构脑图，欢迎补充：
-![mind-map](https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.png)
+https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.png
 
 ## 三、知识点详解
 下面的目录是内容大纲，大部分是以链接的方式进行跳转，如果全部把知识点放上去可能内容太多，影响用户体验。同时部分知识点，可能会以推荐书籍的方式，比如：操作系统。项目知识实战操作代码将会放在code_project文件夹下面。
