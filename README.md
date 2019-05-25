@@ -115,6 +115,7 @@
 
 ### 面试
 * [三年半 Java 后端鹅厂面试经历](https://mp.weixin.qq.com/s/oAiXvB9kZ_bNjCaK8ZyaTA)。
+* [阿里面试](http://mp.weixin.qq.com/s?__biz=MzU0OTk3ODQ3Ng==&mid=2247485268&idx=1&sn=e3ab6d4c8192f871edf875426e526ca8&chksm=fba6ef57ccd166418422203ce53310a63b2d5944f70641ebfc3f9d495d3d0267b12c39da835e&mpshare=1&scene=24&srcid=#rd)。
 
 ### 持续集成
 
