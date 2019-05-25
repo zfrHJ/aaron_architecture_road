@@ -39,6 +39,7 @@
 #### 系统设计
 * [系统设计典型问题的思考](https://mp.weixin.qq.com/s/ds2FVCBhBS-5NTuWcggu1Q)。
 * [设计一个电商平台积分兑换系统](http://mp.weixin.qq.com/wap/loginauthtmpl?action=index&notifyticket=ca3820f3a2e07c1d9225548a13a8ba1a#wechat_redirect)。
+* [如何设计一个百万级用户的抽奖系统？](https://mp.weixin.qq.com/s/LNqMbTWcbaa0Bz_NI6OkpA)。
 
 ### 操作系统
 这部分知识点将以推荐数据的方式进行呈现。待更新........
