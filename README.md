@@ -87,6 +87,7 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [MySql开发规范和实战(备份/分区)](https://mp.weixin.qq.com/s/VgD2dR5igpLcr3V94Ig1IA)。
 * [【踩坑记录】记一次MySQL主从复制延迟的坑](https://www.cnblogs.com/hoohack/p/7073286.html)。
 * [MySql面试题一（主从复制延迟问题）](https://mp.weixin.qq.com/s/iW2ief3ir0pRGnHxaTJ8fg)。
+* [为什么要分库分表，常用的中间件有哪些？](https://mp.weixin.qq.com/s/GdFfjMShMBD9JM3Psi9T3A)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
@@ -117,6 +118,7 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 ### 面试
 * [三年半 Java 后端鹅厂面试经历](https://mp.weixin.qq.com/s/oAiXvB9kZ_bNjCaK8ZyaTA)。
 * [阿里面试](http://mp.weixin.qq.com/s?__biz=MzU0OTk3ODQ3Ng==&mid=2247485268&idx=1&sn=e3ab6d4c8192f871edf875426e526ca8&chksm=fba6ef57ccd166418422203ce53310a63b2d5944f70641ebfc3f9d495d3d0267b12c39da835e&mpshare=1&scene=24&srcid=#rd)。
+* [【面试现场】为什么MySQL数据库要用B+树存储索引？](https://mp.weixin.qq.com/s/9oAc5QgJ7kub2-HISTnW6A)。
 
 ### 持续集成
 
@@ -149,6 +151,17 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [Percona Toolkit](https://www.percona.com/downloads/percona-toolkit/LATEST/)。
 * [redis官网](https://redis.io/)。
 * [mybatis-plus](https://mp.baomidou.com/)。
+* [Docker国内镜像地址]()。
+	Docker中国区官方镜像(不可用了)
+	https://registry.docker-cn.com
+	网易
+	http://hub-mirror.c.163.com
+	ustc (我现在用的是这个)
+	https://docker.mirrors.ustc.edu.cn
+	中国科技大学
+	https://docker.mirrors.ustc.edu.cn
+	阿里云容器  服务
+	https://cr.console.aliyun.com/
 
 
 
