@@ -88,6 +88,10 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [【踩坑记录】记一次MySQL主从复制延迟的坑](https://www.cnblogs.com/hoohack/p/7073286.html)。
 * [MySql面试题一（主从复制延迟问题）](https://mp.weixin.qq.com/s/iW2ief3ir0pRGnHxaTJ8fg)。
 * [为什么要分库分表，常用的中间件有哪些？](https://mp.weixin.qq.com/s/GdFfjMShMBD9JM3Psi9T3A)。
+* [数据库中间件详解](https://mp.weixin.qq.com/s/Mm5NpYxPopwk4R0BTQe8YQ)。
+* [分库分表原理(算法)](https://mp.weixin.qq.com/s/WBUnNFK_NkuAK_Qq1jy2SQ)。
+* [SpringBoot + MyBatis + MySQL 读写分离实战](https://mp.weixin.qq.com/s/Sc4E9ht_rmHohJ5rUurKZQ)。
+* [分库分表实战](https://mp.weixin.qq.com/s/hZuUSmR6Wsb_ljog7cuk5Q)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
@@ -140,11 +144,15 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 主要以线上问题记录和热点问题提供思路解决。基础以云(腾讯云和阿里云)和微服务。
 #### 云和微服务
 * [线上问题：云崩溃和服务不可用](https://mp.weixin.qq.com/s/vLYAKW-w4eKr7JgXHPbUOw)。
+* [如何分析项目内存泄露和溢出等问题？](https://mp.weixin.qq.com/s/F6KtMo2FEYcL4K-ccgW8Lg)。
 
 
 ## 四、欢迎关注本人微信公众号，扫描二维码直接关注。
 
 ![微信图片_20190320205839](https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/aaron.jpg)
+
+### 联系方式，欢迎交流
+QQ：2376094638(微信)
 
 ## 五、官网网站链接
 
