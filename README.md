@@ -34,6 +34,10 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 
 #### 设计模式
 * [UML,时序图和设计模式六大原则详解](https://mp.weixin.qq.com/s/UCinvvvTaqKTCVilz_vvBw)。
+* [简单工厂和工厂方法](https://mp.weixin.qq.com/s/qq3pJcIy1M6N1krdB7eFqQ)。
+* [抽象工厂模式](https://mp.weixin.qq.com/s/ADwka20VHEGKkImCUTbJjw)。
+* [建造者模式和原型模式](https://mp.weixin.qq.com/s/4xdUSUBnob3tkgsfOP6mCw)。
+* [单例模式详解，只要看这一篇文章就够了](https://mp.weixin.qq.com/s/_qixad2NAonjZyz6uVKIpg)。
 
 
 #### 系统设计
@@ -92,6 +96,14 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [分库分表原理(算法)](https://mp.weixin.qq.com/s/WBUnNFK_NkuAK_Qq1jy2SQ)。
 * [SpringBoot + MyBatis + MySQL 读写分离实战](https://mp.weixin.qq.com/s/Sc4E9ht_rmHohJ5rUurKZQ)。
 * [分库分表实战](https://mp.weixin.qq.com/s/hZuUSmR6Wsb_ljog7cuk5Q)。
+* [分库分表后如何部署上线](https://mp.weixin.qq.com/s/JiEkUAmaYWIxxEjs4kSY5g)。
+
+#### 分布式事务
+* [什么是分布式事务？分布式相关概念](https://mp.weixin.qq.com/s/yeJKnJAgp_utD0BOvFsczA)。
+* [如何选择分布式方案？](https://mp.weixin.qq.com/s/V7SOvy4HMQAA-xqBlT3PZQ)。
+* [我说分布式事务之TCC](https://mp.weixin.qq.com/s/KLN8x3CWJ9r1G7kPO9_OHg)。
+* [我说分布式事务之最大努力通知型事务](https://mp.weixin.qq.com/s/_IN07r2jA_0MLYdjABJy2w)。
+* [我说分布式事务之可靠消息最终一致性事务1-原理及实现](https://mp.weixin.qq.com/s/cJPksvoIujI20XdxneNNig)。
 
 ### 框架(应用)
 重点介绍常用框架，项目常用的。比如Spring等 。待更新........
@@ -123,6 +135,7 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [三年半 Java 后端鹅厂面试经历](https://mp.weixin.qq.com/s/oAiXvB9kZ_bNjCaK8ZyaTA)。
 * [阿里面试](http://mp.weixin.qq.com/s?__biz=MzU0OTk3ODQ3Ng==&mid=2247485268&idx=1&sn=e3ab6d4c8192f871edf875426e526ca8&chksm=fba6ef57ccd166418422203ce53310a63b2d5944f70641ebfc3f9d495d3d0267b12c39da835e&mpshare=1&scene=24&srcid=#rd)。
 * [【面试现场】为什么MySQL数据库要用B+树存储索引？](https://mp.weixin.qq.com/s/9oAc5QgJ7kub2-HISTnW6A)。
+* [二本的我怎么拿到的字节跳动offer](https://www.jianshu.com/p/755d499535d0)。
 
 ### 持续集成
 
