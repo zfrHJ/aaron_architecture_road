@@ -34,10 +34,19 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 
 #### 设计模式
 * [UML,时序图和设计模式六大原则详解](https://mp.weixin.qq.com/s/UCinvvvTaqKTCVilz_vvBw)。
+
+
+##### 创建型
 * [简单工厂和工厂方法](https://mp.weixin.qq.com/s/qq3pJcIy1M6N1krdB7eFqQ)。
 * [抽象工厂模式](https://mp.weixin.qq.com/s/ADwka20VHEGKkImCUTbJjw)。
 * [建造者模式和原型模式](https://mp.weixin.qq.com/s/4xdUSUBnob3tkgsfOP6mCw)。
 * [单例模式详解，只要看这一篇文章就够了](https://mp.weixin.qq.com/s/_qixad2NAonjZyz6uVKIpg)。
+
+##### 结构型
+* [外观模式和装饰模式](https://mp.weixin.qq.com/s/fCbDkZpDA-f99r-l_NNaag)。
+* [适配器模式和享元模式](https://mp.weixin.qq.com/s/hc0_-gF7X-3Q6YoiVe7v4g)。
+* [组合模式和桥接模式](https://mp.weixin.qq.com/s/_iVvj6SHkR29io6dqGEaiA)。
+
 
 
 #### 系统设计
@@ -98,7 +107,7 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [分库分表实战](https://mp.weixin.qq.com/s/hZuUSmR6Wsb_ljog7cuk5Q)。
 * [分库分表后如何部署上线](https://mp.weixin.qq.com/s/JiEkUAmaYWIxxEjs4kSY5g)。
 
-#### 分布式事务
+##### 分布式事务
 * [什么是分布式事务？分布式相关概念](https://mp.weixin.qq.com/s/yeJKnJAgp_utD0BOvFsczA)。
 * [如何选择分布式方案？](https://mp.weixin.qq.com/s/V7SOvy4HMQAA-xqBlT3PZQ)。
 * [我说分布式事务之TCC](https://mp.weixin.qq.com/s/KLN8x3CWJ9r1G7kPO9_OHg)。
