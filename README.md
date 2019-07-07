@@ -46,7 +46,11 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [外观模式和装饰模式](https://mp.weixin.qq.com/s/fCbDkZpDA-f99r-l_NNaag)。
 * [适配器模式和享元模式](https://mp.weixin.qq.com/s/hc0_-gF7X-3Q6YoiVe7v4g)。
 * [组合模式和桥接模式](https://mp.weixin.qq.com/s/_iVvj6SHkR29io6dqGEaiA)。
+* [详解代理模式(静态/JDK/Cglib)，看这一篇就够了！](https://mp.weixin.qq.com/s/NUnohM0ItUhRpUdQb5ZhnA)。
 
+##### 行为型
+* [模板模式和迭代器模式](https://mp.weixin.qq.com/s/o_dXD_JKnwoPVAP7L52K9w)。
+* [策略模式和监听器模式](https://mp.weixin.qq.com/s/6_m7ZpSH8ZviN-oWBksFzw)。
 
 
 #### 系统设计
@@ -58,7 +62,15 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 这部分知识点将以推荐数据的方式进行呈现。待更新........
 
 ### 网络层
-重点介绍TCP协议，同时讲述框架，比如Http相关的client 和 著名的netty框架。待更新........
+重点介绍TCP协议，同时讲述框架，比如Http相关的client 和 著名的netty框架。
+
+#### nginx系列
+* [安装和基本配置](https://mp.weixin.qq.com/s/AAQZBoLSaHGuMsgPpSXkUg)。
+* [反向代理和负载均衡](https://mp.weixin.qq.com/s/VnUI9g5v1IUGtt8ysAmAXA)。
+* [session共享问题和失效转移](https://mp.weixin.qq.com/s/tD5kVaO4fuxrp07L9dluWw)。
+* [nginx+lua 和添加HTTPS证书](https://mp.weixin.qq.com/s/Cg46Pa4Plz7cplKzvhkCKw)。
+* [Lua+nginx详细介绍](https://www.iteye.com/blogs/subjects/nginx-lua)。
+
 
 ### 数据层
 数据库将以mysql为基础进行讲解。同时也会讲nosql，比如redis等。
@@ -145,6 +157,8 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [阿里面试](http://mp.weixin.qq.com/s?__biz=MzU0OTk3ODQ3Ng==&mid=2247485268&idx=1&sn=e3ab6d4c8192f871edf875426e526ca8&chksm=fba6ef57ccd166418422203ce53310a63b2d5944f70641ebfc3f9d495d3d0267b12c39da835e&mpshare=1&scene=24&srcid=#rd)。
 * [【面试现场】为什么MySQL数据库要用B+树存储索引？](https://mp.weixin.qq.com/s/9oAc5QgJ7kub2-HISTnW6A)。
 * [二本的我怎么拿到的字节跳动offer](https://www.jianshu.com/p/755d499535d0)。
+* [最近面试java后端开发的感受：如果就以平时项目经验来面试，通过估计很难——再论面试前的准备](https://mp.weixin.qq.com/s/rmMuZd2Hf9kEoH1wwyWhvA)。
+* [如何在面试中介绍自己的项目经验](https://mp.weixin.qq.com/s/yPcYbVLMHzFrqY30Z-iKAQ)。
 
 ### 持续集成
 
