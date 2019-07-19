@@ -76,3 +76,17 @@ show binary logs;
 
 --查看bin-log的内容
 show binlog events in 'mysql-bin.000001'
+
+-- 查看binllog文本内容这个是在Linux下的bin，执行的。window下我没有执行成功。
+-- mysqlbinlog 的执行格式
+mysqlbinlog [options] log_file ...
+
+-- 查看bin-log二进制文件（shell方式）
+mysqlbinlog -v --base64-output=decode-rows /var/lib/mysql/master.000003
+
+-- 查看bin-log二进制文件（带查询条件）
+mysqlbinlog -v --base64-output=decode-rows /var/lib/mysql/master.000003 \
+    --start-datetime="2019-03-01 00:00:00"  \
+    --stop-datetime="2019-03-10 00:00:00"   \
+    --start-position="5000"    \
+    --stop-position="20000"
