@@ -22,7 +22,18 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 ### 编程语言
 
 #### 1.Java
-介绍Java的特性，同时穿插源码解读。待更新........
+介绍Java的特性，同时穿插源码解读。
+
+##### Java并发类
+* [高并发概念和测试工具介绍](https://mp.weixin.qq.com/s/30KSlYu_X8EM4jOzV9EQXA)。
+* [Java内存模型详解（包含面试回答）](https://mp.weixin.qq.com/s/ZF1hmR2gUQHRxLvRRBGjlg)。
+* [线程安全性详解（原子性）](https://mp.weixin.qq.com/s/jrhqsSeYI2HJiuqRZunE3g)。
+* [线程安全性(可见性和有序性)](https://mp.weixin.qq.com/s/Su0fAeU60x73uKnO1L994A)。
+* [手撕面试题ThreadLocal！！！](https://mp.weixin.qq.com/s/bEabzgxJGBnciyLBnDMnkQ)。
+* [安全发布对象和不可变性](https://mp.weixin.qq.com/s/fCCxU5Oxv8f1nbfYIqJc3Q)。
+* [J.U.C组件介绍和使用](https://mp.weixin.qq.com/s/EPhd2PNyAgeH2QihFGPzrg)。
+* [BlockingQueue场景和使用](https://mp.weixin.qq.com/s/VcgHE7p7vIDDE6unVVRvUA)。
+* [线程池详解](https://mp.weixin.qq.com/s/u9pmigC_N8yWDHr8h212gg)。
 
 #### 2.Python
 * [环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。  
@@ -159,6 +170,7 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [二本的我怎么拿到的字节跳动offer](https://www.jianshu.com/p/755d499535d0)。
 * [最近面试java后端开发的感受：如果就以平时项目经验来面试，通过估计很难——再论面试前的准备](https://mp.weixin.qq.com/s/rmMuZd2Hf9kEoH1wwyWhvA)。
 * [如何在面试中介绍自己的项目经验](https://mp.weixin.qq.com/s/yPcYbVLMHzFrqY30Z-iKAQ)。
+* [四年努力，梦归阿里，和大家聊聊成长感悟](https://mp.weixin.qq.com/s/vWRf1W5Rzxa3aeXo1EYmlg)。
 
 ### 持续集成
 

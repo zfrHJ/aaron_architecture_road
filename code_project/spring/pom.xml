@@ -39,7 +39,17 @@
 			<artifactId>canal.client</artifactId>
 			<version>1.1.3</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.zfr.aaron</groupId>
+            <artifactId>code_project</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-core</artifactId>
+			<version>1.5.18</version>
+		</dependency>
+    </dependencies>
 
 	<profiles>
 		<profile>
