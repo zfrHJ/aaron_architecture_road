@@ -2,7 +2,7 @@
 1.[code_project](https://github.com/zfrHJ/aaron_architecture_road/tree/master/code_project)是代码管理库，主要是学习过程中的项目实战。主要以Java和Python语言为主，同时包括脚本语言(sh,sql)。Java以Spring Boot框架为基础进行搭建。
 
 2.其他的都是项目资料：
-* [picture](https://github.com/zfrHJ/aaron_architecture_road/tree/master/picture)文件夹是存储项目图片的；  
+* [picture](https://github.com/zfrHJ/aaron_architecture_road/tree/master/picture)文件夹是存储项目图片的；这个很重要大部分知识点脑图都在这。  
 * [environmental_construction](https://github.com/zfrHJ/aaron_architecture_road/tree/master/environmental_construction)文件夹表示的是环境的安装，主要是在Linux上，同时部分采用的是docker容器部署方式等。
 
 3.项目将会从服务器，框架，源码，分布式知识点进行阐述。有不对的地方，欢迎更新指正，可以关注我的公众号直接发消息进行联系！
