@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<hutool.version>4.1.19</hutool.version>
 	</properties>
 
 	<dependencies>
@@ -48,6 +49,25 @@
 			<groupId>com.netflix.hystrix</groupId>
 			<artifactId>hystrix-core</artifactId>
 			<version>1.5.18</version>
+		</dependency>
+		<!--Java工具集-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool.version}</version>
+		</dependency>
+		<!--MyBeanUtils 对象属性属性自动封装 高效率复制-->
+		<dependency>
+			<groupId>com.esotericsoftware</groupId>
+			<artifactId>reflectasm</artifactId>
+			<version>1.11.3</version>
+		</dependency>
+		<!-- 简化POJO的创建的一个类库，采用 lombok 提供的 @Data 修饰符后，getter和setter以及constructor等都不需要写了 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+			<scope>provided</scope>
 		</dependency>
     </dependencies>
 
