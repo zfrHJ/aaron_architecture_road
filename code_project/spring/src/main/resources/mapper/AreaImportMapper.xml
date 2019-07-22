@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zfr.aaron.spring.mapper.AreaImportMapper">
+  <resultMap id="BaseResultMap" type="com.zfr.aaron.spring.entity.AreaImport">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="area_code" property="areaCode"/>
+    <result column="state" property="state"/>
+    <result column="create_time" property="createTime"/>
+    <result column="update_time" property="updateTime"/>
+
+  </resultMap>
+
+  <insert id="insertList">
+    INSERT INTO `ework_platform`.`t_area_import` ( `area_code`, `state`, `create_time`)
+    VALUES
+    <foreach collection ="list" item="item" separator =",">
+      (#{item.areaCode}, #{item.state}, #{item.createTime})
+    </foreach >
+
+  </insert>
+
+  <insert id="insert" parameterType="com.zfr.aaron.spring.entity.AreaImport">
+    INSERT INTO `ework_platform`.`t_area_import` ( `area_code`, `state`, `create_time`)
+    VALUES
+      (#{areaCode}, #{state}, #{createTime})
+
+  </insert>
+
+</mapper>
