@@ -3,6 +3,7 @@ package com.zfr.aaron.spring.controller;
 import com.zfr.aaron.spring.entity.AreaImport;
 import com.zfr.aaron.spring.mapper.AreaImportMapper;
 import com.zfr.aaron.spring.project.config.JDBCDataSourceConfig;
+import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -40,6 +41,7 @@ public class SqlController {
      * @return
      * @throws SQLException
      */
+    @ApiOperation(value = "测试jdbc", notes = "测试jdbc")
     @GetMapping("/sql")
     public String testSql() throws SQLException {
         long start = System.currentTimeMillis()/1000;
@@ -80,6 +82,7 @@ public class SqlController {
      * @return
      * @throws SQLException
      */
+    @ApiOperation(value = "测试mybatis", notes = "测试mybatis")
     @GetMapping("/sql/mybatis")
     public String testMybatisSql() throws SQLException {
         long start = System.currentTimeMillis()/1000;
@@ -117,6 +120,7 @@ public class SqlController {
      * @return
      * @throws SQLException
      */
+    @ApiOperation(value = "测试mybatis-bath", notes = "测试mybatis-bath")
     @GetMapping("/sql/mybatis/bath")
     public String testMybatis1Sql() throws SQLException {
         long start = System.currentTimeMillis()/1000;

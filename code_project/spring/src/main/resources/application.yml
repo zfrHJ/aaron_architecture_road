@@ -30,4 +30,8 @@ mybatis:
 
 #mybatis-plus
 mybatis-plus.mapper-locations: classpath*:mapper/**/*Mapper.xml
-mybatis-plus.type-aliases-package: com.pagoda.account.reconciliation.common.entity
+mybatis-plus.type-aliases-package: com.zfr.aaron.spring.entity
+
+## 是否启用swagger文档
+swagger:
+  enabled: true
