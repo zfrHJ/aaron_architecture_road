@@ -31,7 +31,7 @@ public class Swagger2Configuration {
         .licenseUrl("")
         .termsOfServiceUrl("")
         .version(VERSION)
-        //                .contact(new Contact("developer", "", ""))
+        //.contact(new Contact("developer", "", ""))
         .build();
   }
 
@@ -40,7 +40,7 @@ public class Swagger2Configuration {
     return new Docket(DocumentationType.SWAGGER_2)
         .apiInfo(apiInfo())
         .select()
-        //                .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
+        //.apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
         .apis(RequestHandlerSelectors.basePackage("com.zfr.aaron.spring.controller"))
         .paths(PathSelectors.any())
         .build();

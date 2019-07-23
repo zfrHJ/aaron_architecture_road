@@ -3,6 +3,7 @@ package com.zfr.aaron.spring.controller;
 import com.zfr.aaron.spring.entity.AreaImport;
 import com.zfr.aaron.spring.mapper.AreaImportMapper;
 import com.zfr.aaron.spring.project.config.JDBCDataSourceConfig;
+import com.zfr.aaron.spring.project.utils.MyStringUtils;
 import io.swagger.annotations.ApiOperation;
 import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSession;
@@ -16,8 +17,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 /**
@@ -89,8 +89,9 @@ public class SqlController {
 
         List<AreaImport> areaImports = new LinkedList<>();
 
-        AreaImport areaImport ;
+        //List<AreaImport> areaImports = new ArrayList<>();
 
+        AreaImport areaImport ;
         for (int i=0;i < 100000;i++){
 
             areaImport = new AreaImport();
@@ -107,7 +108,31 @@ public class SqlController {
 
             areaImports.add(areaImport);
         }
-        areaImportMapper.insertList(areaImports);
+        //areaImportMapper.insertList(areaImports);
+
+        if (MyStringUtils.isObjNotEmpty(areaImports) && areaImports.size() > 0) {
+            //限制条数
+            int pointsDataLimit = 10000;
+            Integer size = areaImports.size();
+            //判断是否有必要分批
+            if (pointsDataLimit < size) {
+                //分批数
+                int part = size / pointsDataLimit;
+                for (int i = 0; i < part; i++) {
+                    //1000条
+                    List<AreaImport>  listPage = areaImports.subList(0, pointsDataLimit);
+                    areaImportMapper.insertList(listPage);
+                    //剔除
+                    areaImports.subList(0, pointsDataLimit).clear();
+                }
+                if (!areaImports.isEmpty()) {
+                    areaImportMapper.insertList(areaImports);
+                }
+            } else {
+                //操作
+                areaImportMapper.insertList(areaImports);
+            }
+        }
 
         long end = System.currentTimeMillis()/1000;
         System.out.println(end - start);
