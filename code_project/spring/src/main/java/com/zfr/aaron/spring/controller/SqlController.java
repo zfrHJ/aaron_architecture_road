@@ -48,8 +48,8 @@ public class SqlController {
         Connection conn = jdbcDataSourceConfig.getConnection();
         conn.setAutoCommit(false);
         PreparedStatement ps = null;
-
-        String sql = "INSERT INTO `ework_platform`.`t_area_import` ( `area_code`, `state`, `create_time`, `update_time`) VALUES ( ?, ?, ?, ?)";
+        String sql = "INSERT INTO `ework_platform`.`t_area_import` " +
+                "( `area_code`, `state`, `create_time`, `update_time`) VALUES ( ?, ?, ?, ?)";
         // 批量插入时ps对象必须放到for循环外面
         ps = conn.prepareStatement(sql);
         for (int i=0;i < 100000;i++){
@@ -60,14 +60,14 @@ public class SqlController {
             ps.setDate(4, date);
 
             ps.addBatch();
-            // 每1000条记录插入一次
+            // 每10000条记录插入一次
             if (i % 10000 == 0){
                 ps.executeBatch();
                 conn.commit();
                 ps.clearBatch();
             }
         }
-        // 剩余数量不足1000
+        // 剩余数量不足10000
         ps.executeBatch();
         conn.commit();
         ps.clearBatch();
@@ -88,9 +88,7 @@ public class SqlController {
         long start = System.currentTimeMillis()/1000;
 
         List<AreaImport> areaImports = new LinkedList<>();
-
         //List<AreaImport> areaImports = new ArrayList<>();
-
         AreaImport areaImport ;
         for (int i=0;i < 100000;i++){
 
@@ -108,8 +106,6 @@ public class SqlController {
 
             areaImports.add(areaImport);
         }
-        //areaImportMapper.insertList(areaImports);
-
         if (MyStringUtils.isObjNotEmpty(areaImports) && areaImports.size() > 0) {
             //限制条数
             int pointsDataLimit = 10000;

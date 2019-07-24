@@ -16,9 +16,9 @@ public class CSVDigester {
      * @param type
      * @return
      */
-    public static List parseCSV2Bean (String filename, Class type){
+    public static List<Record> parseCSV2Bean (String filename, Class type){
 
-        List list =null;
+        List<Record> list =null;
 
         try {
             //每条记录以逗号分隔数据, 并以'\'作为行结束符。
@@ -30,7 +30,7 @@ public class CSVDigester {
 
             mappingStrategy.setType(type);
 
-            CsvToBean csv = new CsvToBean();
+            CsvToBean<Record> csv = new CsvToBean<>();
 
             //数据被按行解析并存入list
             list = csv.parse(mappingStrategy, reader);

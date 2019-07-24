@@ -21,11 +21,16 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
   profiles:
     active: dev
+  jpa:
+    show-sql: true
+
 server:
   port: 8080
 
 mybatis:
   mapper-locations: classpath:mapper/**/**.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
 #mybatis-plus
@@ -35,3 +40,13 @@ mybatis-plus.type-aliases-package: com.zfr.aaron.spring.entity
 ## 是否启用swagger文档
 swagger:
   enabled: true
+
+logging:
+  level:
+    com.cet.diagsyscloud.system.dao: debug
+    com.zfr.aaron.spring.mapper: debug
+    org.springframework.jdbc.core: debug
+    com.mysql.cj.jdbc.StatementImpl: debug
+    java.sql.Statement: debug
+    java.sql.Connection: debug
+
