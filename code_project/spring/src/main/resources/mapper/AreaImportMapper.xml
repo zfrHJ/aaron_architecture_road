@@ -29,4 +29,17 @@
 
   </insert>
 
+  <select id="selectForwardOnly" resultSetType="FORWARD_ONLY" fetchSize="-2147483648" resultType="com.zfr.aaron.spring.entity.AreaImport">
+
+  select area_code as areaCode , create_time as createTime , state from t_area_import
+
+  </select>
+
+
+  <select id="getAll" resultType="com.zfr.aaron.spring.entity.AreaImport">
+     select area_code as areaCode , create_time as createTime , state from t_area_import
+
+  </select>
+
+
 </mapper>

@@ -4,8 +4,12 @@ import com.zfr.aaron.spring.entity.AreaImport;
 import com.zfr.aaron.spring.mapper.AreaImportMapper;
 import com.zfr.aaron.spring.project.config.JDBCDataSourceConfig;
 import com.zfr.aaron.spring.project.utils.MyStringUtils;
+import com.zfr.aaron.spring.project.utils.cvs.Record;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.cursor.Cursor;
 import org.apache.ibatis.session.ExecutorType;
+import org.apache.ibatis.session.ResultContext;
+import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +39,47 @@ public class SqlController {
 
     @Resource
     private SqlSessionTemplate sqlSessionTemplate;
+
+
+    @GetMapping("/cursor")
+    public String  getCursor(){
+
+        long start = System.currentTimeMillis()/1000;
+        List<AreaImport> list =  new ArrayList<>();
+
+        areaImportMapper.selectForwardOnly(new ResultHandler<AreaImport>() {
+            @Override
+            public void handleResult(ResultContext<? extends AreaImport> resultContext) {
+                list.add(resultContext.getResultObject());
+            }
+        });
+
+        long end = System.currentTimeMillis()/1000;
+        System.out.println("时间:"+ (end - start));
+        System.out.println(list.size());
+        /*Cursor<AreaImport> cursor= areaImportMapper.scrollResult();
+        Iterator<AreaImport> iter= cursor.iterator();
+        int count=0;
+        while (iter.hasNext()){
+            System.out.println(iter.next().getAreaCode());
+
+        }*/
+        return "";
+    }
+
+    @GetMapping("/all")
+    public String  getAll(){
+
+        long start = System.currentTimeMillis()/1000;
+
+        List<AreaImport> all = areaImportMapper.getAll();
+
+        long end = System.currentTimeMillis()/1000;
+        System.out.println("时间:"+ (end - start));
+        System.out.println(all.size());
+        return "";
+    }
+
 
     /**
      * 适中7秒
