@@ -1,12 +1,12 @@
 package com.zfr.aaron.redis.geo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.geo.*;
 import org.springframework.data.redis.connection.RedisGeoCommands;
 import org.springframework.data.redis.core.GeoOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class GeoRedisUtil {
 
 
-    @Autowired
+    @Resource
     private RedisTemplate<Object, Object> redisTemplate;
 
     /**

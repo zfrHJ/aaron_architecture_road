@@ -1,7 +1,7 @@
 spring:
   redis:
     database: 0 #索引（默认为0）
-    host: 192.168.170.137 #地址
+    host: 192.168.10.249 #地址
     port: 6379 #端口号
 #password:  #连接密码（默认空）
     pool:

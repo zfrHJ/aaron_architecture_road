@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.Collections;
 
 /**
@@ -17,8 +18,8 @@ import java.util.Collections;
 public class RedisUtil {
 
 
-    @Autowired
-    private RedisTemplate<Object, Object> redisTemplate;
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
 
     public Boolean setBit(String key, Integer index, Boolean tag) {
         return redisTemplate.execute((RedisCallback<Boolean>) con -> con.setBit(key.getBytes(), index, tag));

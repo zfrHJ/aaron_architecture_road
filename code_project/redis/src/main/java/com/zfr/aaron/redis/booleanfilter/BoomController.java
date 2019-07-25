@@ -8,7 +8,7 @@ import java.util.List;
 public class BoomController {
 
     @Autowired
-    private RedisTemplate<String, String> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
 
     public String get() {

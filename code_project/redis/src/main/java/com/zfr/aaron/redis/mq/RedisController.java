@@ -1,18 +1,23 @@
 package com.zfr.aaron.redis.mq;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
+import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.Resource;
 import java.util.Collections;
 
 @Controller
 public class RedisController {
-    @Autowired
-    private RedisTemplate<String, String> redisTemplate;
+
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
 
     /**
      * 发布消息
@@ -22,9 +27,52 @@ public class RedisController {
     @RequestMapping("/sendMessage/{id}")
     public String sendMessage(@PathVariable String id) {
 
+
+       /* redisTemplate.executePipelined(new SessionCallback<Object>() {
+
+            @Override
+            public <K, V> Object execute(RedisOperations<K, V> redisOperations) throws DataAccessException {
+
+                //redisOperations.opsForList().leftPush()
+
+                return null;
+            }
+        });*/
+
         redisTemplate.convertAndSend("msg1","哈哈哈，mq 订阅信息"+id);
         redisTemplate.convertAndSend("msg","哈哈哈，mq 订阅信息"+id);
         return "";
+    }
+
+    /**
+     * 测试批量-redis功能
+     * @return
+     */
+    @GetMapping("/add")
+    public String addPipelined(){
+
+        //平时一般
+        Long time = System.currentTimeMillis();
+        for (int i = 0; i < 10000; i++) {
+            redisTemplate.opsForValue().increment("pipline", 1);
+        }
+        System.out.println("耗时：" + (System.currentTimeMillis() - time));
+
+
+        //pipe 管道使用
+        time = System.currentTimeMillis();
+        redisTemplate.executePipelined(new SessionCallback<Object>() {
+            @Override
+            public <K, V> Object execute(RedisOperations<K, V> redisOperations) throws DataAccessException {
+                for (int i = 0; i < 10000; i++) {
+                    redisTemplate.opsForValue().increment("pipline", 1L);
+                }
+                return null;
+            }
+        });
+        System.out.println("耗时：" + (System.currentTimeMillis() - time));
+
+        return  "成功";
     }
 
 

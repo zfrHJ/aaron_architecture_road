@@ -1,16 +1,17 @@
 package com.zfr.aaron.redis.mq;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 @Component
 public class RedisMessage1 implements MessageListener {
-    @Autowired
-    private RedisTemplate<Object, Object> redisTemplate;
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
     @Override
     public void onMessage(Message message, byte[] pattern) {
         RedisSerializer<String> serializer = redisTemplate.getStringSerializer();
