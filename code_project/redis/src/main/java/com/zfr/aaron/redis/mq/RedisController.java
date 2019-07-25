@@ -1,9 +1,11 @@
 package com.zfr.aaron.redis.mq;
 
+import com.zfr.aaron.redis.zset.AnswerVoInZset;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SessionCallback;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
-import java.util.Collections;
+import java.util.*;
 
 @Controller
 public class RedisController {
@@ -107,5 +109,57 @@ public class RedisController {
 
         return "";
     }
+
+    /**
+     * 排序
+     * @return
+     */
+    @GetMapping("/zset")
+    public String AddZSet(){
+
+        String key = "mls_AnswerIdsByQuersionId:"+123;
+        //添加单条
+        redisTemplate.opsForZSet().add(key,234L,5);
+
+        redisTemplate.opsForZSet().add(key,4565L,13);
+
+        redisTemplate.opsForZSet().add(key,2345L,15);
+
+        Set<ZSetOperations.TypedTuple<Object>> var2 = new HashSet<>();
+        ZSetOperations.TypedTuple<Object> answerVoInZset1 = new AnswerVoInZset(2345L, 12);
+        ZSetOperations.TypedTuple<Object> answerVoInZset2 = new AnswerVoInZset(5675L, 16);
+        ZSetOperations.TypedTuple<Object> answerVoInZset4 = new AnswerVoInZset(4565L, 11);
+        var2.add(answerVoInZset1);
+        var2.add(answerVoInZset2);
+        var2.add(answerVoInZset4);
+        //批量添加
+        redisTemplate.opsForZSet().add(key, var2);
+        //移除单个元素
+        redisTemplate.opsForZSet().remove(key,4565L);
+
+        System.out.println();
+        List<Object> recentBrowsingPositionIds = getRecentBrowsingPositionIds(1L);
+
+        return "";
+
+    }
+
+    /**
+     * 批量
+     * @param userId
+     * @return
+     */
+    public List<Object> getRecentBrowsingPositionIds(long userId) {
+        if (userId <= 0) {
+            return Collections.emptyList();
+        }
+        // 获取用户最近浏览的职位id
+        String key = "mls_AnswerIdsByQuersionId:" + 123;
+        Set<Object> positionIds = redisTemplate.opsForZSet().reverseRange(key, 0, 4);
+        System.out.println(positionIds);
+        return new ArrayList<Object>(positionIds);
+    }
+
+
 
 }
