@@ -13,7 +13,7 @@ spring:
       #master: mymaster # 哨兵监听的Redis server的名称
       #nodes:
       #127.0.0.1:26379,127.0.0.1:26479,127.0.0.1:26579 #哨兵的配置列表
-    timeout: 5000 #连接超时时间（毫秒）
+    timeout: 8000 #连接超时时间（毫秒）
 server:
   port: 8000
 

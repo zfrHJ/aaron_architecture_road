@@ -1,12 +1,15 @@
-package com.zfr.aaron.redis.mq;
+package com.zfr.aaron.redis.web;
 
+import com.zfr.aaron.redis.lua.RateLimit;
 import com.zfr.aaron.redis.zset.AnswerVoInZset;
+import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SessionCallback;
 import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
+import org.springframework.data.redis.support.atomic.RedisAtomicInteger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,11 +18,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.annotation.Resource;
 import java.util.*;
 
+/**
+ * @author zfr
+ * 控制器
+ */
 @Controller
 public class RedisController {
 
     @Resource
     private RedisTemplate<String, Object> redisTemplate;
+
+    /**
+     *  10 秒中，可以访问5次
+      */
+    @RateLimit(key = "test", time = 10, count = 5)
+    @GetMapping("/test")
+    public String luaLimiter() {
+        // 简单测试方法
+        RedisAtomicInteger entityIdCounter = new RedisAtomicInteger("counter", redisTemplate.getConnectionFactory());
+        String date = DateFormatUtils.format(new Date(), "yyyy-MM-dd HH:mm:ss.SSS");
+        return date + " 累计访问次数：" + entityIdCounter.getAndIncrement();
+    }
+
 
     /**
      * 发布消息

@@ -50,6 +50,23 @@
 			<artifactId>jrebloom</artifactId>
 			<version>1.0.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons	</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<!-- 简化POJO的创建的一个类库，采用 lombok 提供的 @Data 修饰符后，getter和setter以及constructor等都不需要写了 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.20</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
