@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan({"com.zfr.aaron.spring.mapper"})
+
 public class Application {
 
 	public static void main(String[] args) {

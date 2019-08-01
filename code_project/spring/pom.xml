@@ -50,6 +50,20 @@
 			<artifactId>hystrix-core</artifactId>
 			<version>1.5.18</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-metrics-event-stream -->
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-metrics-event-stream</artifactId>
+			<version>1.5.12</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-javanica -->
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-javanica</artifactId>
+			<version>1.5.18</version>
+		</dependency>
+
+
 		<!--Java工具集-->
 		<dependency>
 			<groupId>cn.hutool</groupId>
@@ -139,6 +153,27 @@
 			<version>RELEASE</version>
 		</dependency>
 		<!-- 序列化 end -->
+		<!-- Hystrix 依赖 -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.10</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+            <version>3.1</version>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-dashboard -->
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-dashboard</artifactId>
+			<version>1.5.18</version>
+		</dependency>
+
+
+
+
 
 	</dependencies>
 
