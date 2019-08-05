@@ -133,7 +133,7 @@ public class SqlController {
         long start = System.currentTimeMillis()/1000;
 
         List<AreaImport> areaImports = new LinkedList<>();
-        //List<AreaImport> areaImports = new ArrayList<>();
+        //List<AreaImport> areaImports = new ArrayList1<>();
         AreaImport areaImport ;
         for (int i=0;i < 100000;i++){
 

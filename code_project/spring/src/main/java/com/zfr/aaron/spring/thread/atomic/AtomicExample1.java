@@ -7,6 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicStampedReference;
 
 @ThreadSafe
 public class AtomicExample1 {
@@ -14,12 +15,14 @@ public class AtomicExample1 {
     public static int clientTotal = 5000;
     // 同时并发执行的线程数
     public static int threadTotal = 200;
+    static AtomicStampedReference reference = new AtomicStampedReference(5000,0);
     public static AtomicInteger count = new AtomicInteger(0);
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
         for (int i = 0; i < clientTotal ; i++) {
+
             executorService.execute(() -> {
                 try {
                     //semaphore.acquire();
@@ -29,14 +32,17 @@ public class AtomicExample1 {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                countDownLatch.countDown();
+                //countDownLatch.countDown();
             });
         }
-        countDownLatch.await();
+        //countDownLatch.await();
         executorService.shutdown();
         System.out.println(count.get());
     }
     private static void add() {
+
+        reference.getReference();
+
         int i = count.incrementAndGet();
         // count.getAndIncrement();
         //System.out.println(i);

@@ -51,6 +51,7 @@ public class HelloController {
     @ResponseBody
     public String getMsg() {
 
+        //模拟远程调用，调用的是redis项目的地址
         byte[] bytes = HttpUtil.doGet("http://localhost:8000/test");
 
         System.out.println(new String(bytes));
