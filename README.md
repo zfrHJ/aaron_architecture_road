@@ -17,7 +17,8 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 下面的目录是内容大纲，大部分是以链接的方式进行跳转，如果全部把知识点放上去可能内容太多，影响用户体验。同时部分知识点，可能会以推荐书籍的方式，比如：操作系统。项目知识实战操作代码将会放在code_project文件夹下面。
 
 ### 数据结构与算法
-待更新........
+* [数组和复杂度](https://mp.weixin.qq.com/s/gt9-LcWV0rRggFB1Nz_qfw)。
+* [链表](https://mp.weixin.qq.com/s/g96zsCfc-8JrSuLTknYndg)。
 
 ### 编程语言
 
@@ -34,6 +35,12 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 * [J.U.C组件介绍和使用](https://mp.weixin.qq.com/s/EPhd2PNyAgeH2QihFGPzrg)。
 * [BlockingQueue场景和使用](https://mp.weixin.qq.com/s/VcgHE7p7vIDDE6unVVRvUA)。
 * [线程池详解](https://mp.weixin.qq.com/s/u9pmigC_N8yWDHr8h212gg)。
+* [Java并发编程最佳实践](https://mp.weixin.qq.com/s/eIpTEBIZFY1DLJEEmIa-2Q)。
+* [缓存概念和组件介绍](https://mp.weixin.qq.com/s/KLs6gfUA0eqRHsyijjy4Yw)。
+* [缓存问题详解(二)：一致性/穿透/雪崩/并发](https://mp.weixin.qq.com/s/vEIlukCi65Erkn5b5EiYjg)。
+* [如何设计一个缓存？](https://mp.weixin.qq.com/s/BX7T7c4QJQxCAsOMlB-a_A)。
+* [限流](https://mp.weixin.qq.com/s/V3Ye4etr3Hzub8wwN1_e0A)。
+* [服务降级与熔断](https://mp.weixin.qq.com/s/XnWUaEBw6w4sQdU9LZffpA)。
 
 #### 2.Python
 * [环境搭建](https://mp.weixin.qq.com/s/d2C_fnbhErABT8Mwhhk5OQ)。  
