@@ -16,6 +16,12 @@ public class Solution {
         System.out.println();
     }
 
+    /**
+     *
+     * @param numbers
+     * @param target
+     * @return
+     */
     static public int[] twoSum1(int[] numbers, int target) {
 
         int low = 0, high = numbers.length - 1;
@@ -33,8 +39,12 @@ public class Solution {
     }
 
 
-
-    //方法一
+    /**方法一
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     static public int[] twoSum(int[] nums, int target) {
 
         for(int i =0; i< nums.length ; i++){
