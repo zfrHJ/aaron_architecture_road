@@ -2,6 +2,8 @@ package com.zfr.aaron.spring.algorithm.concept;
 
 import lombok.Data;
 
+import java.util.concurrent.ArrayBlockingQueue;
+
 /**
  * 链表实现栈
  */
@@ -64,6 +66,8 @@ public class StackBasedOnLinkedList {
 
     }
     public static void main(String[] args) {
+
+        //ArrayBlockingQueue arrayBlockingQueue = new ArrayBlockingQueue();
 
         StackBasedOnLinkedList arrayStack = new StackBasedOnLinkedList();
 

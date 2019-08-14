@@ -54,6 +54,7 @@ public class HelloController {
         //模拟远程调用，调用的是redis项目的地址
         byte[] bytes = HttpUtil.doGet("http://localhost:8000/test");
 
+        //特别注意的是，如果熔断了，这下面的代码不会执行了
         System.out.println(new String(bytes));
         return "成功";
     }
