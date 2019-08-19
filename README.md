@@ -19,6 +19,14 @@ https://github.com/zfrHJ/aaron_architecture_road/blob/master/picture/mind-map.pn
 ### 数据结构与算法
 * [数组和复杂度](https://mp.weixin.qq.com/s/gt9-LcWV0rRggFB1Nz_qfw)。
 * [链表](https://mp.weixin.qq.com/s/g96zsCfc-8JrSuLTknYndg)。
+* [栈和面试题(如何判断有效的括号)](https://mp.weixin.qq.com/s/GxVaXL8fTarGIKc3W79x-A)。
+* [队列](https://mp.weixin.qq.com/s/YxS0A4yAH-aRUELzj-u3DA)。
+* [递归和排序(一)](https://mp.weixin.qq.com/s/P-smzTggpYJeTX0CiJrRrQ)。
+* [快速排序和归并排序](https://mp.weixin.qq.com/s/eNLtaizyOP9Z8JihSJzuqw)。
+* [桶排序和Jdk排序](https://mp.weixin.qq.com/s/s5Z-1xbrPOGdWepHsKtqWA)。
+* [二分查找和跳表](https://mp.weixin.qq.com/s/XSsF5X9_DzYITLqTp6vLMw)。
+* [散列表和Java中的Map解析](https://mp.weixin.qq.com/s/aj1-RyPiYx-eeJX6vsJNQQ)。
+
 
 ### 编程语言
 
