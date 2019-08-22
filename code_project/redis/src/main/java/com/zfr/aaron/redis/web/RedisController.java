@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.*;
@@ -33,6 +34,7 @@ public class RedisController {
       */
     @RateLimit(key = "test", time = 10, count = 5)
     @GetMapping("/test")
+    @ResponseBody
     public String luaLimiter() {
         // 简单测试方法
         RedisAtomicInteger entityIdCounter = new RedisAtomicInteger("counter", redisTemplate.getConnectionFactory());
