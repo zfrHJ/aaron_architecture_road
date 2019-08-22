@@ -57,6 +57,7 @@ public class SqlController {
         long end = System.currentTimeMillis()/1000;
         System.out.println("时间:"+ (end - start));
         System.out.println(list.size());
+
         /*Cursor<AreaImport> cursor= areaImportMapper.scrollResult();
         Iterator<AreaImport> iter= cursor.iterator();
         int count=0;
