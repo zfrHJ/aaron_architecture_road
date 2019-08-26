@@ -15,6 +15,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.sql.Connection;
@@ -42,6 +43,7 @@ public class SqlController {
 
 
     @GetMapping("/cursor")
+    @ResponseBody
     public String  getCursor(){
 
         long start = System.currentTimeMillis()/1000;
@@ -65,7 +67,7 @@ public class SqlController {
             System.out.println(iter.next().getAreaCode());
 
         }*/
-        return "";
+        return "成功";
     }
 
     @GetMapping("/all")
