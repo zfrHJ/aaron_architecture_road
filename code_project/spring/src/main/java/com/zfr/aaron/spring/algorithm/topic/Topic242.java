@@ -1,8 +1,6 @@
 package com.zfr.aaron.spring.algorithm.topic;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Topic242 {
 
@@ -44,7 +42,18 @@ public class Topic242 {
                 return false;
             }
 
-            
+
+
+            new HashSet<>( new ArrayList<>());
+
+
+            List list = new ArrayList<>();
+
+            Arrays.sort(list.toArray());
+
+            String s1 ="";
+
+
         }
 
         System.out.println("test1");
@@ -52,6 +61,8 @@ public class Topic242 {
         System.out.println("test2");
 
         System.out.println("test3");
+
+        System.out.println("test4");
         return true;
     }
 
