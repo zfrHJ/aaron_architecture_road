@@ -29,3 +29,5 @@
 .vscode/
 /mvnw
 /mvnw.cmd
+/.mvn/
+/src/test/
