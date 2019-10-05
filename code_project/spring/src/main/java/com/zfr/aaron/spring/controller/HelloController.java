@@ -3,13 +3,13 @@ package com.zfr.aaron.spring.controller;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zfr.aaron.spring.annountaion.log.annountain.Log;
+import com.zfr.aaron.spring.entity.UserDTO;
 import com.zfr.aaron.spring.project.utils.HttpUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 繁荣Aaron
@@ -18,6 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
     private static final Logger log = LoggerFactory.getLogger(HelloController.class);
 
+    /**
+     * 第一个请求-测试
+     * @return
+     */
     @RequestMapping("/hello")
     //对应的自定义注解，当方法上写这个注解时，就会进入切面类中
     @Log(title="哈喽模块",action="say哈喽")
@@ -27,7 +31,7 @@ public class HelloController {
     }
 
     /**
-     *熔断机制
+     *熔断机制 - 测试
      @HystrixCommand(
              fallbackMethod = "getMsgFallback",
              threadPoolProperties = {  //10个核心线程池,超过20个的队列外的请求被拒绝; 当一切都是正常的时候，线程池一般仅会有1到2个线程激活来提供服务
@@ -62,6 +66,20 @@ public class HelloController {
     public String getMsgFallback() {
         return "已经熔断成功了！";
     }
+
+
+    /**
+     * 走参数校验注解-测试校验是否成功
+     * @param userDTO 请求参数
+     * @return 返回结果
+     */
+    @PostMapping("/save/valid")
+    @ResponseBody
+    public String save(@RequestBody @Validated UserDTO userDTO) {
+        //userService.save(userDTO);
+        return "成功";
+    }
+
 
 
 }
