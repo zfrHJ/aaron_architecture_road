@@ -14,6 +14,7 @@ public class Test {
         CatalogComponent mmallCourse2 = new Course("Java电商二期",66);
         CatalogComponent designPattern = new Course("Java设计模式",77);
 
+
         javaCourseCatalog.add(mmallCourse1);
         javaCourseCatalog.add(mmallCourse2);
         javaCourseCatalog.add(designPattern);
