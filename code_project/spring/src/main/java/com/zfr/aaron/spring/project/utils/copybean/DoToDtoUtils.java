@@ -35,6 +35,8 @@ public class DoToDtoUtils {
                 if(!beanCopierMap.containsKey(cacheKey)){
                     beanCopier = BeanCopier.create(source.getClass(), target.getClass(), false);
                     beanCopierMap.put(cacheKey,beanCopier);
+                }else{
+                    beanCopier = beanCopierMap.get(cacheKey);
                 }
             }
         }else {
