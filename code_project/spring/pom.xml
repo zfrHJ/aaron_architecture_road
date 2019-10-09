@@ -164,12 +164,6 @@
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
         </dependency>
-		<!-- https://mvnrepository.com/artifact/com.netflix.hystrix/hystrix-dashboard -->
-		<dependency>
-			<groupId>com.netflix.hystrix</groupId>
-			<artifactId>hystrix-dashboard</artifactId>
-			<version>1.5.18</version>
-		</dependency>
 
 
 		<!-- cglib的BeanCopier需要的依赖 -->
