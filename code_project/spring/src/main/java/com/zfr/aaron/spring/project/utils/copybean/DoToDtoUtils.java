@@ -2,6 +2,7 @@ package com.zfr.aaron.spring.project.utils.copybean;
 
 import net.sf.cglib.beans.BeanCopier;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,6 +48,22 @@ public class DoToDtoUtils {
 
     }
 
+    public static void main(String[] args) {
+        getBoxWeight(0.072D,"EA");
+        System.out.println(getBoxWeight(0.072D,"EA"));
+    }
 
+    private static String getBoxWeight(Double boxWeight,String unitCode){
+        DecimalFormat df = new DecimalFormat("0.000");
+        String str = df.format(boxWeight);
+        int i = str.indexOf(".");
+        String weight=str.substring(0,i)+str.substring(i+1,str.length());
 
+        if (unitCode.equals("EA")){
+            String s = boxWeight.toString().substring(0, 1);
+            weight="000"+s;
+        }
+
+        return weight;
+    }
 }
