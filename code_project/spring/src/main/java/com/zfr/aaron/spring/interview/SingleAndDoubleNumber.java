@@ -12,7 +12,7 @@ package com.zfr.aaron.spring.interview;
  */
 public class SingleAndDoubleNumber implements Runnable{
 
-    int i = 1;
+     int i = 1;
 
     public static void main(String[] args) {
         SingleAndDoubleNumber t = new SingleAndDoubleNumber();
