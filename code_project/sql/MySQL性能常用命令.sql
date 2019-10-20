@@ -110,5 +110,10 @@ show global status like 'handler_read%';
 
 show global status like 'com_select'; 
 
+--查看行数，类似count(*)操作
+show table status
 
+--查看查询情况，是否有表锁，Waiting for table metadata lock
+
+show processlist
 
