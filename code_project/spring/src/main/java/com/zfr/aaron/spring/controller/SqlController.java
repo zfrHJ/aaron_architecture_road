@@ -14,6 +14,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -132,6 +133,7 @@ public class SqlController {
      */
     @ApiOperation(value = "测试mybatis", notes = "测试mybatis")
     @GetMapping("/sql/mybatis")
+    @Transactional
     public String testMybatisSql() throws SQLException {
         long start = System.currentTimeMillis()/1000;
 
