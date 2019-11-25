@@ -9,7 +9,21 @@ public class LeetCode152 {
 
         System.out.println(maxProduct(a));
     }
-    
+    public int maxProduct1(int[] nums) {
+        int curMax = nums[0];
+        int curMin = nums[0];
+        int lastMax = nums[0];
+        int lastMin = nums[0];
+        int res = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            curMax = Math.max(Math.max(nums[i] * lastMax, nums[i] * lastMin), nums[i]);
+            curMin = Math.min(Math.min(nums[i] * lastMax, nums[i] * lastMin), nums[i]);
+            lastMin = curMin;
+            lastMax = curMax;
+            res = Math.max(res, curMax);
+        }
+        return res;
+    }
 
     public static int maxProduct(int[] nums) {
 
