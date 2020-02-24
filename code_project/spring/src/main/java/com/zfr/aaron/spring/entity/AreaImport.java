@@ -5,11 +5,12 @@ import com.zfr.aaron.spring.annountaion.Table;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @Table("t_area_import")
-public class AreaImport {
+public class AreaImport implements Serializable {
 
     @Id
     private Integer id;

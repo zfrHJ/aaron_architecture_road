@@ -34,7 +34,7 @@ public class SingleAndDoubleNumber implements Runnable{
                 notify();
                 System.out.println(Thread.currentThread().getName() + ":"+ i);
                 i++;
-                try {
+                try { 
                     // 打印完之后，释放资源，等待下次被唤醒
                     if(i < 100){
                         wait();

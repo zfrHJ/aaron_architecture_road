@@ -4,10 +4,7 @@ package com.zfr.aaron.spring.thread.lock;
 
 import com.zfr.aaron.spring.thread.annoations.ThreadSafe;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -26,6 +23,10 @@ public class LockExample2 {
     private final static Lock lock = new ReentrantLock();
 
     public static void main(String[] args) throws Exception {
+
+        new ConcurrentHashMap();
+        new CopyOnWriteArrayList();
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
