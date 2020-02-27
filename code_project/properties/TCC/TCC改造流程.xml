@@ -1,0 +1,92 @@
+
+<!--1.添加jar包  -->
+<dependency>
+	<groupId>org.bytesoft</groupId>
+	<artifactId>bytetcc-supports-springcloud</artifactId>
+	<version>0.4.17</version>
+	<exclusions>
+		<exclusion>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+		</exclusion>
+	</exclusions>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-core</artifactId>
+</dependency>
+
+<dependency>
+	<groupId>org.aspectj</groupId>
+	<artifactId>aspectjweaver</artifactId>
+</dependency>
+
+<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-dbcp2</artifactId>
+	</dependency>
+（2）配置文件
+
+几乎不用修改
+
+（3）数据库表
+
+对每个他操作的数据库，你都要去专门搞一个表
+
+CREATE TABLE `bytejta` (
+  `xid` VARCHAR(32) NOT NULL,
+  `gxid` VARCHAR(40) DEFAULT NULL,
+  `bxid` VARCHAR(40) DEFAULT NULL,
+  `ctime` BIGINT(20) DEFAULT NULL,
+  PRIMARY KEY (`xid`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8
+
+（4）日志文件
+
+他其实通过文件和数据库，都会记录分布式事务执行过程中的一些日志或者记录，状态，进度，这些东西其实是用来在分布式事务执行到一半，服务挂了，服务重启，需要根据之前记录的日志和数据库里的记录，恢复这个分布式事务，继续执行
+
+（5）数据源配置config
+
+@Import(SpringCloudConfiguration.class)
+
+相当于是导入了bytetcc框架为了整合spring cloud他自己的一个SpringCloudConfiguration，里面肯定会配置一大堆bytetcc框架实现的spring cloud相关的组件
+
+@Bean(name = "dataSource")
+
+这个是给DataSource起一个固定的名字，有没有作用，现在看不出来，但是难保人家会用这个名字去获取DataSource bean
+
+LocalXADataSource dataSource = new LocalXADataSource();
+
+LocalXADataSource，其实是bytetcc框架自己封装的一个东西，一看就是对数据源做了一层包装，这样的话呢在执行SQL语句的时候，这个bytetcc可以做一些事情，比如说根据SQL的执行去记录一些数据库里的状态
+
+我们其实从这个框架的引入中，都可以发现一些端倪，bytetecc这种框架如果要实现一整天的分布式事务，肯定会侵入到哪几个点去实现自己的组件呢？
+
+1）spring cloud的feign、ribbon相关的组件，很有可能会被人家做一些定制化，从@import导入一个SpringCloudConfiguration，一看就是人家框架自定义了一些spring cloud的一些组件
+
+2）DataSource肯定被包装了，LocalXaDataSource，这块就可以让人家感知到我们在分布式事务里各个地方做的一些SQL操作
+
+3）TransactionManager，屁股想想，肯定会是bytetcc自己实现了一些TransactionManager相关的东西，所以@Transactional注解启动的事务都是bytetcc在管理
+
+（6）改造服务接口
+
+在服务Controller上一般要加一个注解
+
+@Compensable(interfaceClass = AccountAmountApi.class, 
+				confirmableKey = "accountAmountConfirmService", 
+				cancellableKey = "accountAmountCancelService")
+
+在这个controller中的接口，其实就是try接口，负责锁定资源，或者尝试预分配一些资源，预处理，如果能正常执行的话，那么后面应该就是可以正常进行confirm的
+
+在这个controller中的每个接口的方法，都需要加一个@Transactional注解，这个是人家强制要求的，规约
+
+然后呢就是基于这个接口，再实现2个service bean，confirm bean和cancel bean，都实现了同一个接口，然后在里面实现confirm和cancel的逻辑
+
+cancel，就是说如果try失败了，要用cancel来回滚；如果try成功了，要用confirm来完成操作；如果cancel或者是confirm失败了，那么就会被bytetcc框架不停的重试调用，直到你执行成功为止
+
+（7）改造main类
+@ImportResource({ "classpath:bytetcc-supports-springcloud.xml" }) 
+
+
+
+
+

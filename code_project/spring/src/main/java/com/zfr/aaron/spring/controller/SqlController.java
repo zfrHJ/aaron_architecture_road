@@ -140,6 +140,7 @@ public class SqlController {
         List<AreaImport> areaImports = new LinkedList<>();
         //List<AreaImport> areaImports = new ArrayList1<>();
         AreaImport areaImport ;
+
         for (int i=0;i < 100;i++){
 
             areaImport = new AreaImport();

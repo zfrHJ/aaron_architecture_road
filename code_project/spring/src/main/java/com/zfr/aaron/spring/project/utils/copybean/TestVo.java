@@ -1,8 +1,9 @@
 package com.zfr.aaron.spring.project.utils.copybean;
 
-import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 /**
  * @author zfr
@@ -16,7 +17,15 @@ public class TestVo {
     private String name;
 
     private String code;
+    private List<Integer> list;
 
+    public List<Integer> getList() {
+        return list;
+    }
+
+    public void setList(List<Integer> list) {
+        this.list = list;
+    }
 
     /**
      * 克隆方法
